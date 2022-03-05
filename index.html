@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./src/img/sun_cloud.png"
+    />
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <title>Weather with a click</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="current-weather">
+        <div class="logo">made by chappie</div>
+        <div class="date">
+          <div class="current-day">Friday</div>
+          <div class="current-date">August, 28</div>
+        </div>
+        <div class="temp-loc">
+          <div class="current-temperature">12<span>°</span></div>
+          <div class="current-location">Bucharest, Romania</div>
+        </div>
+      </div>
+      <div class="search-box">
+        <form class="search">
+          <input
+            type="text"
+            class="search__field"
+            placeholder="Search for a city"
+          />
+          <button class="btn search__btn">
+            <div class="search__icon">
+              <i class="fas fa-search"></i>
+            </div>
+          </button>
+        </form>
+        <div class="search-ideas">
+          <div class="city1 city">Kyiv</div>
+          <div class="city1 city">Miami</div>
+          <div class="city1 city">Londra</div>
+          <div class="city1 city">Barcelona</div>
+        </div>
+        <!-- <div class="other-weather-info">
+          <div class="humidity">100</div>
+          <div class="sun-rise">100</div>
+          <div class="sun-down">100</div>
+          <div class="wind">100</div>
+          <div class="polution">100</div>
+        </div> -->
+      </div>
+      <div class="multiple-days-weather">
+        <div class="day-box">
+          <div class="day">Monday</div>
+          <div class="weather-icon"></div>
+          <div class="day-temperature">13<span>°</span></div>
+        </div>
+        <div class="day-box">
+          <div class="day">Tuesday</div>
+          <div class="weather-icon"></div>
+          <div class="day-temperature">13<span>°</span></div>
+        </div>
+        <div class="day-box">
+          <div class="day">Wednesday</div>
+          <div class="weather-icon"></div>
+          <div class="day-temperature">13<span>°</span></div>
+        </div>
+        <div class="day-box">
+          <div class="day">Thursday</div>
+          <div class="weather-icon"></div>
+          <div class="day-temperature">13<span>°</span></div>
+        </div>
+        <div class="day-box">
+          <div class="day">Friday</div>
+          <div class="weather-icon"></div>
+          <div class="day-temperature">13<span>°</span></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/js/controller.js"></script>
+  </body>
+</html>

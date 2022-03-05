@@ -1,0 +1,27 @@
+.app-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 100vw;
+  height: 100vh;
+
+  /* background-color: grey; */
+
+  cursor: url('../img/sun_4.png'), auto;
+}
+
+.current-weather {
+  grid-column: 1/4;
+  grid-row: 1/4;
+}
+
+.search-box {
+  grid-column: 4/5;
+  grid-row: 1/4;
+}
+
+.multiple-days-weather {
+  grid-column: 1/5;
+  grid-row: 4/5;
+}

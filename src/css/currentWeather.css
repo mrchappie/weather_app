@@ -1,0 +1,58 @@
+.current-weather {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  /* background-color: rgb(28, 241, 156); */
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: var(--frederica);
+}
+
+.date {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+.current-day {
+  font-size: 60px;
+  font-family: var(--bhu);
+}
+
+.current-date {
+  font-size: 20px;
+  font-family: var(--bhu);
+}
+
+.temp-loc {
+  position: absolute;
+  right: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  /* background-color: red; */
+}
+
+.current-temperature {
+  font-size: 300px;
+  font-family: var(--frederica);
+}
+
+.current-location {
+  font-size: 40px;
+  font-family: var(--frederica);
+  margin-top: -40px;
+}
+
+/* <a href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Aranagraphics - Flaticon</a> */
