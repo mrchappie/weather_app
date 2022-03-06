@@ -59,7 +59,7 @@ export const getCoords = async function (query) {
     state.cityName = query;
 
     const data = await getJSONCoordsFromQuery(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=${1}&units=metric&appid=${API_KEY}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=${1}&units=metric&appid=${API_KEY}`
     );
 
     state.latitude = data[0].lat;
@@ -82,7 +82,7 @@ export const getLocationByCoords = async function (
 ) {
   try {
     const data = await getJSONLocationByCoords(
-      `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=${1}&appid=${API_KEY}`
+      `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=${1}&appid=${API_KEY}`
     );
 
     state.cityName = data[0].name;
