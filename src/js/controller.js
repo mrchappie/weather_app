@@ -6,7 +6,7 @@ import sevenDays from './views/sevenDays.js';
 import * as config from '../js/views/config.js';
 
 const searchForWeather = function () {
-  clearStateObject();
+  // clearStateObject();
   const query = searchView.getQuery();
   console.log(query);
   getCoordsForQuery(query);
