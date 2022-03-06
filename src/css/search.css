@@ -1,13 +1,15 @@
 .search-box {
-  position: relative;
+  position: absolute;
+  top: 0px;
+  right: 50px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  width: 100%;
-  height: 100%;
+  width: 20%;
+  height: 80%;
   /* background-color: rgb(46, 69, 88); */
 }
 
@@ -28,7 +30,7 @@
   font-family: var(--frederica);
   font-weight: 400;
   font-style: italic;
-  font-size: 20px;
+  font-size: 15px;
   text-indent: 20px;
 
   width: 16em;
@@ -80,4 +82,20 @@
 }
 
 .other-weather-info {
+}
+
+@media (max-width: 1000px) {
+  .search-box {
+    width: 30%;
+    height: 80%;
+  }
+
+  .search-ideas .city {
+    display: none;
+  }
+
+  .search .search__field {
+    width: 12em;
+    height: 2.5em;
+  }
 }

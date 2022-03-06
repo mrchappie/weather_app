@@ -1,5 +1,6 @@
 import { async } from 'regenerator-runtime';
 import { getJSONWeatherByCoords } from '../js/views/helpers.js';
+import { getJSONLocationByCoords } from '../js/views/helpers.js';
 import { getJSONCoordsFromQuery } from '../js/views/helpers.js';
 import { API_KEY } from '../js/views/config.js';
 
@@ -28,6 +29,8 @@ const constructCurrentWeatherObj = function (data) {
     tempLike: weather.feels_like,
     humidity: weather.humidity,
     pressure: weather.pressure,
+    wind: weather.wind_speed,
+    visibility: weather.visibility,
     description: weather.weather[0].description,
     weatherIcon: weather.weather[0].icon,
     weatherId: weather.weather[0].id,
@@ -64,6 +67,8 @@ export const getCoords = async function (query) {
     state.cityName = data[0].name;
     state.country = data[0].country;
 
+    getWeather(state.latitude, state.longitude);
+
     console.log('coords');
     console.log(data);
   } catch (err) {
@@ -71,24 +76,45 @@ export const getCoords = async function (query) {
   }
 };
 
-export const getWeather = async function (lat, lon) {
+export const getLocationByCoords = async function (
+  lat = state.latitude,
+  lon = state.longitude
+) {
+  try {
+    const data = await getJSONLocationByCoords(
+      `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=${1}&appid=${API_KEY}`
+    );
+
+    state.cityName = data[0].name;
+    state.country = data[0].country;
+
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const getWeather = async function (
+  lat = state.latitude,
+  lon = state.longitude
+) {
   try {
     // const data = await getJSONWeatherByCoords(
     //   `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
     // );
     const data = await getJSONWeatherByCoords(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${'hourly'},${'minutely'}&units=metric&appid=${API_KEY}`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${'hourly'},${'minutely'},${'daily'}&units=metric&appid=${API_KEY}`
     );
 
     state.currentWeather = constructCurrentWeatherObj(data);
 
-    state.days = data.daily.map(day => {
-      return constructCurrentWeatherObj1(day);
-    });
+    // state.days = data.daily.map(day => {
+    //   return constructCurrentWeatherObj1(day);
+    // });
 
     console.log('weather');
     console.log(data);
-    console.log(state.days);
+    console.log(state);
   } catch (err) {
     console.log(err);
   }

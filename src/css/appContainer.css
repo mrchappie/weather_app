@@ -1,8 +1,6 @@
 .app-container {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  display: flex;
   width: 100vw;
   height: 100vh;
 
@@ -11,17 +9,52 @@
   cursor: url('../img/sun_4.png'), auto;
 }
 
-.current-weather {
-  grid-column: 1/4;
-  grid-row: 1/4;
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 50%;
+  height: 80%;
+
+  /* background-color: aqua; */
+  background-color: var(--overlay__black__30);
+  box-shadow: 0px 0px 20px var(--overlay__black__30);
 }
 
-.search-box {
-  grid-column: 4/5;
-  grid-row: 1/4;
+@media (max-width: 1000px) {
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50%;
+    height: 80%;
+  }
 }
 
-.multiple-days-weather {
-  grid-column: 1/5;
-  grid-row: 4/5;
+@media (max-width: 700px) {
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 70%;
+    height: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    height: 80%;
+  }
 }

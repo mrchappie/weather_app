@@ -1,12 +1,14 @@
 .current-weather {
-  position: relative;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   width: 100%;
-  height: 100%;
+  height: 80%;
   /* background-color: rgb(28, 241, 156); */
 }
 
@@ -15,12 +17,13 @@
   top: 10px;
   left: 10px;
   font-family: var(--frederica);
+  color: var(--overlay__white__40);
 }
 
 .date {
   position: absolute;
-  top: 20%;
-  left: 20%;
+  top: 10%;
+  left: 10%;
 }
 
 .current-day {
@@ -35,24 +38,103 @@
 
 .temp-loc {
   position: absolute;
-  right: 300px;
+  width: 25%;
+  height: 50%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 
-  /* background-color: red; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .current-temperature {
-  font-size: 300px;
-  font-family: var(--frederica);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+  height: 200px;
+  font-size: 200px;
+  font-family: var(--baloo);
 }
 
 .current-location {
-  font-size: 40px;
-  font-family: var(--frederica);
+  /* background-color: red;
+   */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+  height: 50px;
+
+  font-size: 30px;
+  font-family: var(--baloo);
   margin-top: -40px;
 }
 
 /* <a href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Aranagraphics - Flaticon</a> */
+
+@media (max-width: 1800px) {
+  .date {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+  }
+
+  .current-temperature {
+    font-size: 200px;
+  }
+
+  .current-location {
+    font-size: 30px;
+    margin-top: -40px;
+  }
+
+  .temp-loc {
+    position: absolute;
+
+    width: 45%;
+    height: 50%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* background-color: red; */
+  }
+}
+
+@media (max-width: 1000px) {
+  .date {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+
+  .current-temperature {
+    font-size: 200px;
+  }
+
+  .current-location {
+    font-size: 30px;
+    margin-top: -40px;
+  }
+
+  .temp-loc {
+    position: absolute;
+    width: 70%;
+    height: 50%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* background-color: red; */
+  }
+}
