@@ -21,17 +21,23 @@
   </head>
   <body>
     <div class="bg-image"></div>
+    <!-- <div class="logo">made by chappie with the help of <a href="https://www.flaticon.com/free-icons/eye" title="eye icons">Eye icons created by Freepik - Flaticon</a></div> -->
     <div class="app-container">
       <div class="container">
         <div class="current-weather">
-          <div class="logo">made by chappie</div>
           <div class="date">
-            <div class="current-day">Friday</div>
-            <div class="current-date">August, 28</div>
+            <div class="current-day">Friday&nbsp;-&nbsp;</div>
+            <div class="current-date">august, 28</div>
           </div>
           <div class="temp-loc">
             <div class="current-temperature">12<span>°</span></div>
             <div class="current-location">Bucharest, Romania</div>
+            <div
+              class="weather-condition"
+              style="
+                background-image: url('http://openweathermap.org/img/wn/10d@2x.png');
+              "
+            ></div>
           </div>
         </div>
         <div class="search-box">
@@ -47,20 +53,35 @@
               </div>
             </button>
           </form>
-          <div class="search-ideas">
+          <!-- <div class="search-ideas">
             <div class="city1 city">Kyiv</div>
             <div class="city1 city">Miami</div>
             <div class="city1 city">Londra</div>
             <div class="city1 city">Barcelona</div>
-          </div>
+          </div> -->
         </div>
-        <div class="multiple-days-weather">
-          <div class="other-weather-info">
-            <div class="humidity box">Humidity: 100</div>
-            <div class="clouds box">Clouds: 100</div>
-            <div class="pressure box">Pressure: 100</div>
-            <div class="wind box">Wind: 100</div>
-            <div class="visibility box">Visibility: 100</div>
+        <div class="weather-information">
+          <div class="info-container">
+            <div class="humidity box">
+              <div class="description"></div>
+              <span class="value">100</span>
+            </div>
+            <div class="clouds box">
+              <div class="description"></div>
+              <span class="value">100</span>
+            </div>
+            <div class="pressure box">
+              <div class="description"></div>
+              <span class="value">100</span>
+            </div>
+            <div class="wind box">
+              <div class="description"></div>
+              <span class="value">100</span>
+            </div>
+            <div class="visibility box">
+              <div class="description"></div>
+              <span class="value">100</span>
+            </div>
           </div>
         </div>
       </div>

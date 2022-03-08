@@ -1,6 +1,6 @@
 @import 'currentWeather.css';
 @import 'appContainer.css';
-@import 'sevenDays.css';
+@import 'weatherInfo.css';
 @import 'search.css';
 @import 'variables.css';
 @import 'fonts.css';
@@ -26,11 +26,11 @@ body {
       var(--overlay__black__40),
       var(--overlay__black__40)
     ),
-    url('https://images.pexels.com/photos/8573474/pexels-photo-8573474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    url('https://images.pexels.com/photos/1123445/pexels-photo-1123445.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 
-  filter: blur(2px);
+  filter: blur(10px);
   transform: scale(1.2);
 }

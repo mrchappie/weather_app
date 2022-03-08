@@ -54,6 +54,14 @@ class currentWeatherView {
                     <div class="current-location">${weather.cityName}, ${
       weather.country
     }</div>
+    <div
+              class="weather-condition"
+              style="
+                background-image: url('https://openweathermap.org/img/wn/${
+                  weather.currentWeather.weatherIcon
+                }@2x.png');
+              "
+            ></div>
                 </div>
             
     `;

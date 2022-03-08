@@ -52,4 +52,4 @@ const init = function () {
   }, 1000);
 };
 
-init();
+// init();
