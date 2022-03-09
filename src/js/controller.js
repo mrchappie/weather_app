@@ -36,11 +36,13 @@ const clearStateObject = function () {
   };
 };
 
+const hideMessage = function () {
+  const message = document.querySelector('.no-location-message');
+
+  setTimeout(() => (message.style.display = 'none'), 3000);
+};
+
 const renderView = function (data) {
-  // const loader = document.querySelector('.loader');
-
-  // loader.style.display = 'none';
-
   currentWeather._generateMarkup(data);
   weatherInfo._generateMarkup(data);
 };
@@ -48,6 +50,8 @@ const renderView = function (data) {
 const init = function () {
   searchView.addHandlerSearch(searchForWeather);
   helpers.getDeviceLocation();
+
+  window.addEventListener('load', hideMessage);
 
   setTimeout(() => {
     model.getLocationByCoords();

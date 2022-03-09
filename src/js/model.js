@@ -88,7 +88,7 @@ export const getLocationByCoords = async function (
     state.cityName = data[0].name;
     state.country = data[0].country;
 
-    console.log(data);
+    // console.log(data);
   } catch (err) {
     console.log(err);
   }
@@ -112,9 +112,9 @@ export const getWeather = async function (
     //   return constructCurrentWeatherObj1(day);
     // });
 
-    console.log('weather');
-    console.log(data);
-    console.log(state);
+    // console.log('weather');
+    // console.log(data);
+    // console.log(state);
   } catch (err) {
     console.log(err);
   }

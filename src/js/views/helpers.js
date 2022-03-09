@@ -63,5 +63,5 @@ export const getDeviceLocation = function () {
 const getCoordsFromApi = function (position) {
   model.state.latitude = position.coords.latitude;
   model.state.longitude = position.coords.longitude;
-  console.log(model.state);
+  // console.log(model.state);
 };
