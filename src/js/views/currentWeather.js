@@ -40,29 +40,24 @@ class currentWeatherView {
   _generateMarkup(weather) {
     this._clear();
     const markup = `
-                <div class="logo">made by chappie</div>
-                    <div class="date">
-                        <div class="current-day">${this._day}</div>
-                    <div class="current-date">${this._month}, ${
-      this._date
-    }</div>
-                </div>
-                <div class="temp-loc">
-                    <div class="current-temperature">${Math.round(
-                      weather.currentWeather.temp
-                    )}<span>°</span></div>
-                    <div class="current-location">${weather.cityName}, ${
+    <div class="date">
+      <div class="current-day">${this._day}&nbsp;-&nbsp;</div>
+          <div class="current-date">${this._month}, ${this._date}</div>
+    </div>
+    <div class="temp-loc">
+      <div class="current-temperature">${Math.round(
+        weather.currentWeather.temp
+      )}<span>°</span></div>
+      <div class="current-location">${weather.cityName}, ${
       weather.country
     }</div>
-    <div
-              class="weather-condition"
-              style="
-                background-image: url('https://openweathermap.org/img/wn/${
-                  weather.currentWeather.weatherIcon
-                }@2x.png');
-              "
-            ></div>
-                </div>
+      <div
+        class="weather-condition"
+        style="background-image: url('http://openweathermap.org/img/wn/${
+          weather.currentWeather.weatherIcon
+        }@2x.png');">
+    </div>
+    </div>
             
     `;
     this._parentElement.insertAdjacentHTML('beforeend', markup);

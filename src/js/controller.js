@@ -2,7 +2,7 @@ import * as model from '../js/model.js';
 import * as helpers from '../js/views/helpers.js';
 import searchView from '../js/views/searchView';
 import currentWeather from './views/currentWeather.js';
-import sevenDays from './views/sevenDays.js';
+import weatherInfo from './views/weatherInfo.js';
 import * as config from '../js/views/config.js';
 
 const searchForWeather = function () {
@@ -37,8 +37,12 @@ const clearStateObject = function () {
 };
 
 const renderView = function (data) {
+  // const loader = document.querySelector('.loader');
+
+  // loader.style.display = 'none';
+
   currentWeather._generateMarkup(data);
-  sevenDays._generateMarkup(data);
+  weatherInfo._generateMarkup(data);
 };
 
 const init = function () {
@@ -52,4 +56,4 @@ const init = function () {
   }, 1000);
 };
 
-// init();
+init();

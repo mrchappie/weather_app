@@ -64,10 +64,10 @@
   background-image: url(../img/humidity_1.png);
 }
 .info-container .box:nth-child(2) {
-  background-image: url(../img/atmospheric.png);
+  background-image: url(../img/cloud_1.png);
 }
 .info-container .box:nth-child(3) {
-  background-image: url(../img/cloud_1.png);
+  background-image: url(../img/atmospheric.png);
 }
 .info-container .box:nth-child(4) {
   background-image: url(../img/wind.png);
